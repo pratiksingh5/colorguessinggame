@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi';
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#bg{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+}
+
+
+.toggle-container button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border: 1px solid grey;
+    display: block;
+    cursor: pointer;
+}
+.toggle-container{
+    margin-bottom: 10px;
+}
+#light{
+    background-color: black;
+    color: white;
+}
+#dark{
+    background-color: white;
+    columns: black;
+}
+
+.game-panel{
+    height: 80%;
+    width: 86%;
+    background-color: rebeccapurple;
+    margin: 0 auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* border: solid 1px rgb(176, 167, 206); */
+}
+
+.widgets{
+    height: 100px;
+    width: 100%;
+    background-color: #F8F0DF;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info{
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.info span{
+    background-color: #1068b0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+    color: white;
+}
+
+.canvas{
+    height: calc(100% - 100px);
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.circle{
+    width: 70px;
+    height: 70px;
+    background-color: #c7ecee;
+    border-radius: 50%;
+    margin-right: 20px;
+}
