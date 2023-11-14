@@ -28,10 +28,12 @@ light.addEventListener("click", function(){
 let circle = document.querySelector('.circle');
 let canvas = document.querySelector('.canvas');
 let guessNumber = document.querySelector('#guessNumber');
+let scoreboard = document.querySelector('#scoreboard')
 
 guessNumber.innerHTML = getRandomNumber();
 
 function makeCircles(){
+  canvas.innerHTML = "";
   for(let i =0; i< 44; i++){
     let cloneCircle = circle.cloneNode(true);
     let random = getRandomNumber();
@@ -49,24 +51,6 @@ function getRandomNumber(){
 }
 
 
-
-// function makeCircles(){
-//     console.log("Circle creation starts");
-
-
-//     for(let i = 0; i < 36 ; i++){
-//         // canvas.innerHTML = `<div class="circle">5</div>`;
-//         canvas.innerHTML = canvas.innerHTML +`<div class="circle">5</div>`
-//         console.log('circle created', i)
-//     }
-
-// }
-
-// makeCircles()
-
-
-
-
 // TIMER KE CODE ME 
 // setInterval(function, time)
 
@@ -81,4 +65,23 @@ function decreaseTime(){
    }
 }
 
-setInterval(decreaseTime, 1000)
+setInterval(decreaseTime, 1000);
+
+let score = 0;
+
+
+canvas.addEventListener('click', function(event){
+  // console.log('clicked', event.target.textContent);
+  let clickedNumber = event.target.textContent;
+  let targetNumber = guessNumber.textContent;
+
+  if(clickedNumber === targetNumber){
+    console.log('sahi jawab');
+    score = score + 10;
+    scoreboard.innerHTML = score;
+    guessNumber.innerHTML = getRandomNumber();
+    makeCircles()
+
+  }
+
+})
